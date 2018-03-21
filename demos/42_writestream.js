@@ -1,0 +1,21 @@
+const fs = require('fs');
+
+const ws = fs.createWriteStream('./test.txt');
+
+const tid= setInterval(() => {
+    const num = parseInt(Math.random() * 10);
+    console.log(num);
+    if (num < 8) {
+        ws.write(num + '');    //  这里是字符串
+    } else {
+        clearInterval(tid);
+        ws.end();
+    }
+}, 200);
+
+ws.on('finish', () => {
+    console.log('done!');
+});
+
+
+
