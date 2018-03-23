@@ -6,7 +6,7 @@ const tid= setInterval(() => {
     const num = parseInt(Math.random() * 10);
     console.log(num);
     if (num < 8) {
-        ws.write(num + '');    //  这里是字符串
+        ws.write(num + '');    //  只能写入 <string> 或 <Buffer>
     } else {
         clearInterval(tid);
         ws.end();

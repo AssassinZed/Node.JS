@@ -5,7 +5,12 @@ function test1() {
 }
 
 function test2(a, b) {
-    if (a > b) { a += a * 2 } else { b -= a }
+    if (a > b) {
+        a += a * 2 
+        } else {
+        b -= a 
+    }
+
     return a + b;
 }
 

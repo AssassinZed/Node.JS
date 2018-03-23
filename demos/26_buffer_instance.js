@@ -8,17 +8,17 @@ buf.copy()
 */
 
 const buf = Buffer.from('This is a test!');
-console.log(buf.length);
+console.log(buf.length);    //  15
 
 const buf2 = Buffer.allocUnsafe(10);
 buf2[0] = 2;
+console.log(buf2.length);    //  10
 
-console.log(buf2.length);
-console.log(buf.toString('base64'));
+console.log(buf.toString('base64'));    //  VGhpcyBpcyBhIHRlc3Qh
 
 const buf3 = Buffer.allocUnsafe(10);
-console.log(buf3);
-console.log(buf3.fill(10, 2, 6));
+console.log(buf3);    //  <Buffer d0 53 b1 60 07 02 00 00 80 54>
+console.log(buf3.fill(10, 2, 6));    //  <Buffer d0 53 0a 0a 0a 0a 00 00 80 54>
 
 const buf4 = Buffer.from('test');
 const buf5 = Buffer.from('test');

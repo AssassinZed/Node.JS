@@ -5,7 +5,7 @@
 	execPath
 */
 
-const {argv, argv0, execArgv, execPath}=process;
+const { argv, argv0, execArgv, execPath } = process;
 
 argv.forEach(item => {
 	console.log(item)

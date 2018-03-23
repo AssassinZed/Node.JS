@@ -4,6 +4,6 @@ const filePath = '/usr/local/node_modules/n/package.json';
 
 const ret=parse(filePath);
 
-console.log(ret);
+console.log(ret);    //  { root: '/',dir: '/usr/local/node_modules/n',base: 'package.json',ext: '.json',name: 'package' }
 
-console.log(format(ret));
+console.log(format(ret));    //  /usr/local/node_modules/n\package.json
